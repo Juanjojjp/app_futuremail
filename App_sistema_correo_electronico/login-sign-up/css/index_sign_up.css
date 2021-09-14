@@ -1,0 +1,142 @@
+* {
+    margin-bottom:20px;   /* se verá en todos los navegadores */
+    margin-bottom:15px;  /* en todos los IE, se verá con 15px */
+    margin-bottom:15px; /* este hack, es equivalente al anterior: todos los IE */
+    margin-bottom:10px;  /* en todos los IE6, o inferior, se verá con 10px */
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/fondo.jpg) no-repeat fixed center top;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+
+}
+
+.login-box {
+    background: black;
+    width: 420px;
+    height: 600px;
+    top: 18%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    box-sizing: border-box;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+
+}
+
+.login-box h1 {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px 0 15px 0;
+    font-size: 34px;
+
+}
+
+.login-box h2 {
+    margin-left: 0;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 24px;
+
+}
+
+.login-box p {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 34px;
+    font-size: 18px;
+    
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.login-box input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    height: 24px;
+    color: #fff;
+
+}
+
+.login-box input[type="password"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    height: 24px;
+    color: #fff;
+}
+
+.login-box input[type="submit"] {
+    outline: none;
+    height: 24px;
+    font-size: 16px
+}
+
+.login-box a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ccc;
+    padding-left: 30px;
+}
+
+.formulario__input-error {
+	font-size: 15px;
+	margin-left: 30px;
+	display: none;
+    position:fixed;
+    width: 35%;
+    height: 4%;
+    margin-top: -6%;
+    color: rgb(143, 4, 4);
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.sign_up_error {
+	height: 25px;
+    width: 70%;
+	line-height: 25px;
+	background: #922222;
+	margin-left: 15%;
+    margin-top: -6%;
+	border-radius: 3px;
+	display: none;
+    position:fixed;
+
+}
+
+.sign_up_error h3 {
+    text-align: center;
+    font-size: 14px;
+    margin-top: -1%
+
+}
+
+.sign_up_error-activo {
+	display: block;
+}
+
+
