@@ -4,7 +4,6 @@
     margin-bottom:15px;  /* en todos los IE, se verá con 15px */
     margin-bottom:15px; /* este hack, es equivalente al anterior: todos los IE */
     margin-bottom:10px;  /* en todos los IE6, o inferior, se verá con 10px */
-   
 }
 
 body {
@@ -15,8 +14,6 @@ body {
     width: 100%;
     color: black;
     overflow: hidden;
-
-
 }
 
 #logo {
@@ -25,7 +22,6 @@ body {
     margin-top: 40px;
     margin-left: 70px;
     width: 30%;
-
 }
 
 header h1 {
@@ -35,16 +31,14 @@ header h1 {
     text-align: center;
     font-size: 54px;
     width: 30%;
-
 }
 
 #usuario {
     position: relative;
     float: left;
     margin-top: 40px;
-    margin-right: 70px;
-    width: 30%;
-
+    margin-left: 215px;
+    width: 3%;
 }
 
 header {
@@ -54,7 +48,6 @@ header {
     display: inline-block;
     padding: 30px 40px 0px 40px;
     margin: 0px;
-
 }
 
 nav ul li {
@@ -63,7 +56,6 @@ nav ul li {
     list-style-type: none;
     text-align: center;
     width: 32%;
-
 }
 
 nav {
@@ -74,15 +66,6 @@ nav {
     position: absolute;
     background-color: rgb(168, 167, 167);
     margin-top: -4px;
-
-
-}
-
-#redactar {
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    
 }
 
 section {
@@ -93,34 +76,27 @@ section {
     margin-top: 70px;
     border-top: 4px solid;
     background-color:rgb(221, 225, 226);
-
-
 }
 
 .container {
     display: flex;
-
 }
 
 section img {
     padding-top: 20px;
     padding-left: 20px;
-
 }
 
 section h2 {
     padding-top: 2px;
     padding-left: 20px;
     font-size: 30px;
-
-
 }
 
 section article {
     padding-top: 70px;
     font-size: 50px;
     text-align: center;
-
 }
 
 aside {
@@ -133,24 +109,20 @@ aside {
     border-left: 4px solid;
     background-color: rgb(168, 167, 167);
     margin-top: -4px;
-
 }
 
 #playlist-hiphop {
     padding-top: 4%;
     padding-left: 12%;
-
 }
 
 #game {
     padding-left: 5%;
-
 }
 
 main {
     margin-top: 0;
     padding-top: 0;
-
 }
 
 footer {
@@ -161,109 +133,178 @@ footer {
     border-top: 4px solid black;
     margin-top: -10px;
     background-color: rgb(168, 167, 167);
-    
-
 }
 
 footer h3 {
     padding-top: 0px;
     padding-left: 8px;
-
 }
 
 footer address{
     font-size: 14px;
     padding-left: 10px
-
 }
 
-
-
-
-.modalDialog {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
-
-}
-
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-    
-}
-
-.modalDialog div {
-	width: 400px;
-	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-
-}
-.close {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
+/* Boton de redactar */
+.btn-abrir-popup {
+	padding: 0 20px;
+	height: 40px;
+	margin-top: -6px;
+	line-height: 40px;
+	border: 2px solid black;
+	color: black;
+	background-color: rgb(66, 131, 85);
+	border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	transition: .4s ease all;
+	cursor: pointer;
+	-webkit-transition: .4s ease all;
+	-moz-transition: .4s ease all;
+	-ms-transition: .4s ease all;
+	-o-transition: .4s ease all;
 }
 
-.close:hover { 
-    background: #00d9ff; 
-
+.btn-abrir-popup:hover {
+	background-color: rgb(33, 80, 46);
 }
 
+/* Vista de ventana emergente */
+.overlay {
+	background: rgba(0, 0, 0, 0.411);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
 
-#redactar {
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #f8f8f8;
+	box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 25px;
+	text-align: center;
+	width: 400px;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 26px;
+    height: 20px;
+    width: 20px;
+    line-height: 15px;
+    padding-top: 0px;
+    margin-top: -5px;
+    margin-left: 390px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+    color: #202020;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: rgb(172, 25, 25);
+}
+
+.popup h3 {
+	font-size: 40px;
+	font-weight: 600;
+	opacity: 0;
+    color: black;
+    margin-top: 10px;
+}
+
+.popup form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 52px;
     text-align: center;
-    font-size: 34px;
-    padding: 4px 0 6px 0;
-
-
+    border: 2px solid #6d6c6c;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
 }
-
 
 #mensaje {
-    width: 80%;
+    width: 70%;
     height: 100px;
-
 }
 
-.formulario input[type="submit"] {
-    outline: none;
-    height: 24px;
-    font-size: 16px
+.popup form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: black;
+	background-color: rgb(66, 131, 85);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
 
+.popup form .btn-submit:hover {
+    background-color: rgb(29, 70, 40);
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 

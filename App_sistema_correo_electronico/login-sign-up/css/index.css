@@ -42,27 +42,14 @@ body {
     padding-top: 20px;
 }
 
-.login-box a {
-    padding-top: 14px;
-    text-align: center;
-    font-size: 20px;
+.zoom a {
+    font-size: 25px;
     text-decoration: none;
     color: rgb(163, 161, 161);
-    background-color: #fff;
+    cursor: pointer;
+    margin-left: 45%;
 }
 
-.zoom {
-    transition: transform 0.4s;
-    -webkit-transition: transform 0.4s;
-    -moz-transition: transform 0.4s;
-    -ms-transition: transform 0.4s;
-    -o-transition: transform 0.4s;
-}
-
-.zoom:hover {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+#entrar a:hover {
+    color: whitesmoke;
 }

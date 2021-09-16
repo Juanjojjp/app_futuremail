@@ -78,6 +78,7 @@ body {
     height: 24px;
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .login-box a {
@@ -85,6 +86,7 @@ body {
     font-size: 16px;
     color: #ccc;
     padding-left: 30px;
+    cursor: pointer;
 }
 
 .login_error {
@@ -121,5 +123,5 @@ body {
 }
 
 #login:hover {
-    background-color: rgb(66, 173, 192);
+    background-color: rgb(57, 94, 54);
 }

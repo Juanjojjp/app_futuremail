@@ -85,6 +85,7 @@ body {
     height: 24px;
     font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .sign_up-box a {
@@ -143,7 +144,7 @@ body {
 }
 
 #create_account:hover {
-    background-color: rgb(66, 173, 192);
+    background-color: rgb(57, 94, 54);
 }
 
 #return {

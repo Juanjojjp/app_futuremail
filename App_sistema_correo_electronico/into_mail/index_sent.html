@@ -21,27 +21,28 @@
         <nav>
             <ul>
                 <!-- Inicio de la sub-pagina para redactar un mensaje -->
-                <li><a href="#openModal" id="redactar"><b>Redactar</b></a></li>
-                    <div id="openModal" class="modalDialog">
-                        <div>  
-                            <a href="#close" title="Close" class="close">X</a>
+                <li><button id="btn-abrir-popup" class="btn-abrir-popup"><b>Redactar</b></button></li>
+                <div class="overlay" id="overlay">
+                    <div class="popup" id="popup">
+                        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" title="Cerrar">X</a>
+                        <h3> Redactar</h3>
 
-                                <h2 id="redactar"> Redactar </h2>
-
-                            <form action="#" method="post"> <!-- Falta poner donde se van a dirigir los datos del formulario -->
-
+                        <form action="" method="post">
+                            <div class="contenedor-inputs">
                                 <!-- A quien se le enviara el mensaje -->
-                                <p><label>Para: <input class="Input" type="text" value="" size="20" name="destinatario"></label></p>
+                                <p><label>Para:  <input type="text" value="" size="20" name="destinatario" placeholder="ejemplo@futuremail.com"></label></p>
                                 <!-- Asunto -->
-                                <p><label>Asunto: <input class="Input" type="text" value="" size="20" name="asunto"></label></p>
+                                <p><label>Asunto: <input type="text" value="" size="20" name="asunto"></label></p>
                                 <!-- Mensaje a enviar -->
-                                <p><label>Mensaje<br><textarea class="Input" type="text" value="" size="20" name="mensaje" id="mensaje" placeholder="Que mensaje desea enviar?"></textarea></label></p>
+                                <p><label>Mensaje<br><textarea type="text" value="" size="20" name="mensaje" id="mensaje" 
+                                    placeholder="Que mensaje desea enviar?"></textarea></label></p>
+                            </div>
 
-                                <p><input value="Enviar" type="submit" class="boton"></p>
-
-                            </form>
-                        </div>
-                    </div> 
+                            <p><input value="Enviar" type="submit" class="btn-submit"></p>
+                        </form>
+                    </div>
+                </div>
+                <script src="js/redactar.js"></script>
                 <!-- Fin de la sub-pagina de redactar -->
                 <!-- Opciones extra para ver -->
                 <li><a href="index_trash.html"><img src="images/papelera.svg" height="30px" width="30px"></a></li>
@@ -51,7 +52,7 @@
 
         <main> 
             <!-- Contenido principal de la pagina -->
-            <section>
+            <section id="contenido">
                 <div class="container">
                     <img src="images/enviados.svg" height="40px" width="40px">
                     <h2>Mensajes enviados</h2>
