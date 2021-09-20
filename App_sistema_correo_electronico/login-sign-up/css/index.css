@@ -1,0 +1,55 @@
+
+* {
+    margin-bottom:20px;   /* se verá en todos los navegadores */
+    margin-bottom:15px;  /* en todos los IE, se verá con 15px */
+    margin-bottom:15px; /* este hack, es equivalente al anterior: todos los IE */
+    margin-bottom:10px;  /* en todos los IE6, o inferior, se verá con 10px */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/fondo.jpg) no-repeat fixed center top;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+.login-box {
+    background: black;
+    width: 500px;
+    height: 200px;
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    box-sizing: border-box;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+.login-box h1 {
+    text-align: center;
+    font-size: 34px;
+    padding-top: 20px;
+}
+
+.zoom a {
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(163, 161, 161);
+    cursor: pointer;
+    margin-left: 45%;
+}
+
+#entrar a:hover {
+    color: whitesmoke;
+}
