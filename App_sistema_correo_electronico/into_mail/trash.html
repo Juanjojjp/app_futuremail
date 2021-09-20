@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Futuremail</title>
+        <meta name="description" content="Aplicacion de correos electronicos">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="css/trash.css">
+    </head>
+
+    <body>
+        <!-- Inicio de la estructura de la pagina web -->
+        <header>
+            <!-- Header de la pagina, logo, nombre y salir -->
+            <img src="images/correo_electronico.svg" height="70px" width="70px" id="logo">
+            <h1>Futuremail</h1>
+            <a href="../login-sign-up/login.html"><img src="images/cerrar_sesion.svg" title="Salir" height="50px" width="50px" id="salir" class="nav-animation"></a>
+        </header>
+
+        <!-- Barra de navegacion -->
+        <nav>
+            <ul>
+                <!-- Inicio de la sub-pagina para redactar un mensaje -->
+                <li><button id="btn-abrir-popup" class="btn-abrir-popup"><b>Redactar</b></button></li>
+                    <div class="overlay" id="overlay">
+                        <div class="popup" id="popup">
+                            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" title="Cerrar">X</a>
+                            <h3> Redactar</h3>
+                            <!-- Contenido de la sub pagina  -->
+                            <form action="" method="post">
+                                <div class="contenedor-inputs">
+                                    <!-- A quien se le enviara el mensaje -->
+                                    <p><label>Para:  <input type="text" class="input-redactar" value="" size="20" name="destinatario" placeholder="ejemplo@futuremail.com"></label></p>
+                                    <!-- Asunto -->
+                                    <p><label>Asunto: <input type="text" class="input-redactar" value="" size="20" name="asunto"></label></p>
+                                    <!-- Mensaje a enviar -->
+                                    <p><label>Mensaje<br><textarea type="text" class="input-redactar" value="" size="20" name="mensaje" id="mensaje" 
+                                        placeholder="Que mensaje desea enviar?"></textarea></label></p>
+                                </div>
+
+                                <p><input value="Enviar" type="submit" class="btn-submit"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Enlace al script para abrir y cerrar popup -->
+                    <script src="js/redactar_trash.js"></script>
+                <!-- Fin de la popup de redactar -->
+
+                <!-- Opciones extra de la nav -->
+                <li><a href="index_homepage.html"><img src="images/bandeja_entrada.svg" height="40px" width="40px" title="Home" class="nav-animation"></a></li>
+                <li><a href="sent.html"><img src="images/enviados.svg" height="45px" width="45px" title="Enviados" class="nav-animation"></a></li>
+                <li><a href="favorites.html"><img src="images/icono_estrella.png" height="40px" width="40px" title="Favoritos" class="nav-animation"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal de la pagina -->
+        <main>
+            <!-- Inicio del contenedor del contenido de la bandeja de entrada -->
+            <section id="contenido">
+                <div class="container" id="titulo_estado_actual">
+                    <img src="images/papelera.svg" height="35px" width="35px">
+                    <h2>Papelera</h2>
+                </div>
+
+                <!-- Contenedor de los contactos que se tienen -->
+                <article id="contenido_contacts">
+                    <div class="sidebar-contacts">                       
+                        <a><img src="images/icono_contactos.png" class="avatar-img"></a>
+
+                        <!-- Lista de contactos -->
+                        <div class="sidebar-contacts-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" />
+                                            <i class="user-active">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Catalina Franco</p>
+                                            <p class="user-designation-contacts">catafrancog@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"/>
+                                            <i class="user-inactive">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Rodrigo Alvarez</p>
+                                            <p class="user-designation-contacts">rodrialvarez@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
+                                            <i class="user-active">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Ana</p>
+                                            <p class="user-designation-contacts">anabe@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png"/>
+                                            <i class="user-busy">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Jonathan</p>
+                                            <p class="user-designation-contacts">jonethan@futuremail</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Lista de mensajes a leer  -->
+                <article id="contenido_prev_mensajes">
+
+                    <!-- Lista de mensajes -->
+                    <ul class="email-list">
+                        <li class="email-list-item" class="abrir-mail">
+                            <div class="recipient">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar4.png" height="30px" width="30px"/>
+                                <a href="#" class="recipient-name">Miguel Angel</a>
+                                <button class="abrir-mail" onclick="intercambio_mails1();">
+                                    <a href="#" class="recipient-ver">Abrir</a>
+                                </button>
+                            </div>
+                            <a href="#" class="prev-email-subject">Motocicleta voladora!!!</a>
+                            <div class="email-footer">
+                                <div class="email-action">                                        
+                                    <a href="#" class="trash-email">
+                                        <img src="images/flecha_regresar_mail.png" height="25px" width="25px">
+                                    </a>
+                                    <a href="#" class="trash-email">
+                                        <img src="images/icono_papelera_emails.png" height="22px" width="22px"> 
+                                    </a>
+                                </div>
+                                <span class="email-time">06:32 AM</span>
+                            </div>
+                        </li>
+
+                        <li class="email-list-item" class="abrir-mail">
+                            <div class="recipient">
+                                <img src="images/icono_asus.png" height="30px" width="30px"/>
+                                <a href="#" class="recipient-name">ASUS</a>
+                                <button class="abrir-mail" onclick="intercambio_mails2();">
+                                    <a href="#" class="recipient-ver">Abrir</a>
+                                </button>
+                            </div>
+                            <a href="#" class="prev-email-subject">Publicidad de Asus</a>
+                            <div class="email-footer">
+                                <div class="email-action">                                       
+                                    <a href="#" class="trash-email">
+                                        <img src="images/flecha_regresar_mail.png" height="25px" width="25px">
+                                    </a> 
+                                    <a href="#" class="trash-email">
+                                        <img src="images/icono_papelera_emails.png" height="22px" width="22px"> 
+                                    </a>
+                                </div>
+                                <span class="email-time">15:49 PM</span>
+                            </div>
+                        </li>
+                        <br>
+                        <!-- Script para abrir el mensaje completo al seleccionarlo -->
+                        <script type="text/javascript">
+                            function intercambio_mails1() {
+                                document.getElementById("contenido_mensaje2").style.visibility = "hidden";
+
+                                document.getElementById("contenido_mensaje1").style.visibility = "visible";
+                                document.getElementById("contenido_principal").style.visibility = "hidden";
+                            }
+                            function intercambio_mails2() {
+                                document.getElementById("contenido_mensaje1").style.visibility = "hidden";
+
+                                document.getElementById("contenido_mensaje2").style.visibility = "visible";
+                                document.getElementById("contenido_principal").style.visibility = "hidden";
+                            }
+                        </script>
+                        <!-- Fin del script -->
+                    </ul>             
+                </article>
+
+                <!-- Contenido completo de los mensajes -->
+                <article id="contenido_principal">
+                    <!-- Titulo que se ve mientras no este ningun mensaje abierto -->
+                    <div id="bienvenida-ms">
+                        <h2 class="bienvenida-ms_titulo">Futuremail</h2>
+                    </div>   
+
+                    <!-- Inicio de los mensajes a verse -->
+
+                    <!-- Mensaje del primer prev-mensaje -->
+                    <article id="contenido_mensaje1" class="contenido_mensaje">
+                        <div class="email-desc">
+                            <div class="email-header">
+                                <div class="email-date">Feb 5, 2021 06:32 AM</div>
+                                <div class="email-subject">Motocicleta voladora!!!</div>
+                                <p class="recipient"><span>De:</span> Miguel Angel &lt;Miguegel1560@futuremail.com&gt;</p>
+                            </div>
+                            <div class="email-body">
+                                <p>Hola bro, mira lo que encontre... una motocicleta voladora, que te parece?</p>
+                                <p>
+                                    Y mira lo que encontre fue lo siguiente: <br><i>¿Alguna vez imaginaste que en el futuro habrían motocicletas voladoras? 
+                                    Pues eso está cerca de convertirse en una realidad con Speeder, la primera moto voladora pilotada del mundo. La compañía 
+                                    californiana JetPack Aviation confirmó que realizó una prueba de vuelo inicial en su prototipo y fue todo un éxito.</i>
+                                </p>    
+                                <p>Por si te queda facil averiguame mas informacion sobre esto!, quedo atento a tu respuesta.</p> 
+                            </div>
+
+                            <div class="file-size">
+                                <img src="images/icono_clip_peso_archivo.png" width="20" height="20">
+                                <span>Peso archivo (40 MB)</span>         
+                            </div>
+                            <div class="email-action">
+                                <button>Responder</button>
+                                <button>Reenviar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Mensaje del segundo prev-mensaje -->
+                    <article id="contenido_mensaje2" class="contenido_mensaje">
+                        <div class="email-desc">
+                            <div class="email-header">
+                                <div class="email-date">Feb 3, 2021 15:49 PM</div>
+                                <div class="email-subject">Publicidad</div>
+                                <p class="recipient"><span>De:</span> Elizabeth &lt;asus@futuremail.com&gt;</p>
+                            </div>
+                            <div class="publicidad">
+                                <img src="https://68.media.tumblr.com/e1b7de95834a6d0fc9a401939746d0d4/tumblr_ovrmc8FAWZ1riprylo1_500.jpg" alt="fondo">
+                                <div class="notebook">
+                                        <div class="flash-publicidad">
+                                            <svg version="1.1" id="flash" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 425.2 425.2" style="enable-background:new 0 0 425.2 425.2;" xml:space="preserve">
+                                            <path id="XMLID_1_" class="st0" d="M53.8,213.2c0,0,87,100.2,101.1,107.6s189.7-46.4,188.9-54.3c-0.8-7.9-116.1-64-116.1-64
+                                            s-18.7-102.3-24-104.4C198.5,96,30.5,46.9,27.9,52.4S43.7,211.1,53.8,213.2z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="note-publicidad">
+                                            <img src="https://68.media.tumblr.com/a1e81cac5a5b347995631dba16000a4d/tumblr_ovrm0cGC7N1riprylo1_500.png" alt="notebook">
+                                        </div>
+                                </div>
+                                    
+                                <div class="box-publicidad">
+                                    <p class="box-publicidad-texto">/ASUS</p>
+                                </div>
+                                    
+                                <div class="publicidad-texto">
+                                    <h3>NOTEBOOK ASUS ROG <br>STRIX GL702VS-GB059T</h3>
+                                    <p class="texto-sub">con regalo</p>
+                                    <p class="texto-bann">compacto y potente</p>
+                                    <p class="texto-cont">Disfruta de juegos de alta gama desde <br>cualquier lugar</p>
+                                    <h4>GAMING ON-THE-GO</h4>
+                                    <p class="texto-valor">$ 1.399.990</p>
+                                    <p class="texto-sub2">precio normal: $1.899.990</p> 
+                                </div>
+                                <div class="logo-publicidad">
+                                    <img src="https://68.media.tumblr.com/b8d1947abeadece89e11692795d730e8/tumblr_ovrm2lp8AX1riprylo1_250.png" alt="zmart">
+                                </div>
+                            </div>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <div class="file-size">
+                                <img src="images/icono_clip_peso_archivo.png" width="20" height="20">
+                                <span>Peso archivo (180 MB)</span>
+                            </div>
+                            <div class="email-action">
+                                <button>Responder</button>
+                                <button>Reenviar</button> 
+                            </div>
+                        </div>
+                    </article>
+                <!-- Fin de los mensajes a ver -->
+                </article>
+            </section>
+
+            <!-- Informacion extra para entretener al usuario -->
+            <aside>
+                <!-- Musica -->
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9oh43oAzkyx" 
+                 width="440" height="220" frameborder="0" allowtransparency="true" allow="encrypted-media" id="playlist-hiphop"></iframe>
+                <!-- Mini juego -->
+                <iframe src="http://slither.io" width="500" height="500" id="game" ></iframe>
+            </aside>
+        </main>
+
+        <!-- Informacion de creadores -->
+        <footer>
+            <h3>Creadores de Futuremail</h3>
+            <address>Carlos Daniel Bohorquez Bolanos</address>
+            <address>Juan Jose Perez Franco</address>
+        </footer>
+
+    </body>
+</html>
