@@ -1,0 +1,23 @@
+Atribuciones de los Iconos
+
+Icono del correo al lado del nombre
+<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+Icono del perfil
+<div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+Icono de la papelera
+<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+Icono de enviados
+<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+Icono de recibidos
+<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+Cerrar sesion
+<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+Icono contactos
+<div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
