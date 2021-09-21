@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <meta name="description" content="Aplicacion de correos electronicos">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+   
+    <body>
+        <!-- Inicio de la estructura de la pagina web -->
+        <div class="login-box">
+
+            <div id='titulo'>
+                <h1> Futuremail </h1>
+            </div>
+
+            <!-- Iniciacion del formulario de login -->
+            <form action="../into_mail/index_homepage.html" method="post" id="formulario_login"> 
+
+                <!-- Correo del usuario a ingresar -->
+                <p><label>Correo electronico<br><input class="Input" type="text" value="" size="20" name="user" id="user" required placeholder="ejemplo@futuremail.com"></label></p>
+                <!-- Contraseña del usuario -->
+                <p><label>Contraseña <br><input class="Input" type="password" value="" size="20" name="passw" id="passw" required 
+                    placeholder="Introduzca su contraseña"></label></p>
+
+                <!-- Mensaje de error por si los campos no coinciden con los parametros creados anteriormente -->
+                <div class="login_error" id="login_error">
+                    <h3><b>Error:</b> Son incorrectos los datos</h3>
+                </div>
+
+                <!-- Procede a acceder a la cuenta -->
+                <p><input value="Iniciar sesion" type="submit" class="boton" id="login"></p>
+
+                <!-- Se dirige al sign up a crear una cuenta si no tiene una -->
+                <a href="sign_up.html">Registrarse</a><br>
+                <!-- Se dirige a recuperar la contraseña si esta fue perdida u olvidada -->
+                <a href="recover_password.html">Recuperar contraseña</a>
+            </form>
+            <script src="js/validacion_login.js"></script>
+
+        </div>
+    </body>
+</html>
