@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Futuremail</title>
+        <meta name="description" content="Aplicacion de correos electronicos">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="css/favorites.css">
+    </head>
+
+    <body>
+        <!-- Inicio de la estructura de la pagina web -->
+        <header>
+            <!-- Header de la pagina, logo, nombre y salir -->
+            <img src="images/correo_electronico.svg" height="70px" width="70px" id="logo">
+            <h1>Futuremail</h1>
+            <a href="../login-sign-up/login.html"><img src="images/cerrar_sesion.svg" title="Salir" height="50px" width="50px"  id="salir" class="nav-animation"></a>
+        </header>
+
+        <!-- Barra de navegacion -->
+        <nav>
+            <ul>
+                <!-- Inicio de la sub-pagina para redactar un mensaje -->
+                <li><button id="btn-abrir-popup" class="btn-abrir-popup"><b>Redactar</b></button></li>
+                    <div class="overlay" id="overlay">
+                        <div class="popup" id="popup">
+                            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" title="Cerrar">X</a>
+                            <h3> Redactar</h3>
+                            <!-- Contenido de la sub pagina  -->
+                            <form action="" method="post">
+                                <div class="contenedor-inputs">
+                                    <!-- A quien se le enviara el mensaje -->
+                                    <p><label>Para:  <input type="text" class="input-redactar" value="" size="20" name="destinatario" placeholder="ejemplo@futuremail.com"></label></p>
+                                    <!-- Asunto -->
+                                    <p><label>Asunto: <input type="text" class="input-redactar" value="" size="20" name="asunto"></label></p>
+                                    <!-- Mensaje a enviar -->
+                                    <p><label>Mensaje<br><textarea type="text" class="input-redactar" value="" size="20" name="mensaje" id="mensaje"  
+                                        placeholder="Que mensaje desea enviar?"></textarea></label></p>
+                                </div>
+
+                                <p><input value="Enviar" type="submit" class="btn-submit"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Enlace al script para abrir y cerrar popup -->
+                    <script src="js/redactar_favorites.js"></script>
+                <!-- Fin de la popup de redactar -->
+
+                <!-- Opciones extra de la nav -->
+                <li><a href="trash.html"><img src="images/papelera.svg" height="35px" width="35px" title="Papelera" class="nav-animation"></a></li>
+                <li><a href="sent.html"><img src="images/enviados.svg" height="40px" width="40px" title="Enviados" class="nav-animation"></a></li>
+                <li><a href="index_homepage.html"><img src="images/bandeja_entrada.svg" height="40px" width="40px" title="Home" class="nav-animation"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal de la pagina -->
+        <main> 
+            <!-- Inicio del contenedor del contenido de la bandeja de entrada -->
+            <section id="contenido" >
+                <div class="container" id="titulo_estado_actual">
+                    <img src="images/icono_estrella.png" height="40px" width="40px">
+                    <h2>Favoritos</h2>
+                </div> 
+
+                <!-- Contenedor de los contactos que se tienen -->
+                <article id="contenido_contacts">
+                    <div class="sidebar-contacts">                       
+                        <a><img src="images/icono_contactos.png" class="avatar-img"></a>
+
+                        <!-- Lista de contactos -->
+                        <div class="sidebar-contacts-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" />
+                                            <i class="user-active">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Catalina Franco</p>
+                                            <p class="user-designation-contacts">catafrancog@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"/>
+                                            <i class="user-inactive">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Rodrigo Alvarez</p>
+                                            <p class="user-designation-contacts">rodrialvarez@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
+                                            <i class="user-active">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Ana</p>
+                                            <p class="user-designation-contacts">anabe@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png"/>
+                                            <i class="user-busy">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Jonathan</p>
+                                            <p class="user-designation-contacts">jonethan@futuremail</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </article>                                 
+
+                <!-- Lista de mensajes a leer  -->
+                <article id="contenido_prev_mensajes">
+
+                    <!-- Lista de mensajes -->
+                    <ul class="email-list">
+                        <li class="email-list-item" class="abrir-mail">
+                            <div class="recipient">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" height="30px" width="30px"/>
+                                <a href="#" class="recipient-name">Luna Maria</a>
+                                <button class="abrir-mail" onclick="intercambio_mails1();">
+                                    <a href="#" class="recipient-ver">Abrir</a>
+                                </button>
+                            </div>
+                            <a href="#" class="prev-email-subject">Heyyy!!! mira esta noticia sobre los robots que pueden llegar a sentir.</a>
+                            <div class="email-footer">
+                                <div class="email-action">                              
+                                    <a href="#">
+                                        <svg                 
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="fill"
+                                            >
+                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="trash-email">
+                                        <img src="images/icono_papelera_emails.png" height="22px" width="22px">  
+                                    </a>
+                                </div>
+                                <span class="email-time">13:47 PM</span>
+                            </div>
+                        </li>
+
+                        <li class="email-list-item" class="abrir-mail">
+                            <div class="recipient">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" height="30px" width="30px"/>
+                                <a href="#" class="recipient-name">Elizabeth</a>
+                                <button class="abrir-mail" onclick="intercambio_mails2();">
+                                    <a href="#" class="recipient-ver">Abrir</a>
+                                </button>
+                            </div>
+                            <a href="#" class="prev-email-subject">Receta de los jicatacos de camaron que querias.</a>
+                            <div class="email-footer">
+                                <div class="email-action">                                       
+                                    <a href="#">
+                                        <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="fill"
+                                            >
+                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="trash-email">
+                                        <img src="images/icono_papelera_emails.png" height="22px" width="22px"> 
+                                    </a>
+                                </div>
+                                <span class="email-time">15:49 PM</span>
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- Script para abrir el mensaje completo al seleccionarlo -->
+                        <script type="text/javascript">
+                                function intercambio_mails1() {
+                                    document.getElementById("contenido_mensaje2").style.visibility = "hidden";
+
+                                    document.getElementById("contenido_mensaje1").style.visibility = "visible";
+                                    document.getElementById("contenido_principal").style.visibility = "hidden";
+                                }
+                                function intercambio_mails2() {
+                                    document.getElementById("contenido_mensaje1").style.visibility = "hidden";
+
+                                    document.getElementById("contenido_mensaje2").style.visibility = "visible";
+                                    document.getElementById("contenido_principal").style.visibility = "hidden";
+                                }
+                        </script>
+                        <!-- Fin del script -->
+                    </ul>             
+                </article>
+
+                <!-- Contenido completo de los mensajes -->
+                <article id="contenido_principal">
+                    <!-- Titulo que se ve mientras no este ningun mensaje abierto -->
+                    <div id="bienvenida-ms">
+                        <h2 class="bienvenida-ms_titulo">Futuremail</h2>
+                    </div>   
+
+                    <!-- Inicio de los mensajes a verse -->
+
+                    <!-- Mensaje del primer prev-mensaje -->
+                    <article id="contenido_mensaje1" class="contenido_mensaje">
+                        <div class="email-desc">
+                            <div class="email-header">
+                                <div class="email-date">Feb 9, 2021 13:47 PM</div>
+                                <div class="email-subject">Heyyy!!! mira esta noticia sobre los robots que pueden llegar a sentir.</div>
+                                <p class="recipient"><span>De: </span> Luna Maria &lt;Lunamaria03@futuremail.com&gt;</p>
+                            </div>
+                            <div class="email-body">
+                                <p>Hola!, como estas, solo te escribo para mostrarte esta nueva noticia sobre como los robots pueden sentir... Espero
+                                    que te guste el tema.
+                                </p>
+                                <h3>
+                                    La tecnología de Inteligencia Artificial cada vez avanza más rápido y esta vez parece que ya podrán comenzar a sentir 
+                                    por medio del tacto (y la vista). 
+                                </h3>
+                                <p>
+                                    La MIT comenzó a desarrollar nueva tecnología en Inteligencia Artificial que suena interesante. Además de que parece ser uno 
+                                    de los más grandes avances en esta área de estudio. Tanto que parece sacado de una película de ciencia ficción.
+                                </p>
+                                <p>
+                                    Científicos del Laboratorio de Ciencia Computacional e Inteligencia Artificial del MIT desarrollaron una nueva tecnología que 
+                                    permite a los robots sentir los objetos y texturas a partir de la mirada. Ya que esta crea un archivo de información del 
+                                    tacto de acuerdo a la representación de los objetos que obtiene al tocar cada cosa.
+                                </p>
+                                <p><i>
+                                    Con solo ver la escena, nuestro modelo puede imaginar la sensación de tocar una superficie plana o un objeto afilado. Al 
+                                    tocar ciegamente alrededor , nuestro modelo puede predecir las interacciones con el entorno solamente basado en sensaciones 
+                                    táctiles. Traer estas dos sensaciones juntas puede empedrar al robot y reducir la información que podríamos necesitar para 
+                                    las tareas que involucran la manipulación y la recolecta de objetos.
+                                </i></p>
+                                <p>
+                                    Dijo Yunzhu Li, el autor principal de este nuevo sistema. Afirmando que esta nueva tecnología permitiría al robot manjar 
+                                    objetos reales de una manera más natural.
+                                </p>
+                            </div>
+
+                            <div class="file-size">
+                                <img src="images/icono_clip_peso_archivo.png" width="20" height="20">
+                                <span>Peso archivo (70 MB)</span>        
+                            </div>
+                            <div class="email-action">
+                                <button>Responder</button>
+                                <button>Reenviar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Mensaje del segundo prev-mensaje -->
+                    <article id="contenido_mensaje2" class="contenido_mensaje">
+                        <div class="email-desc">
+                            <div class="email-header">
+                                <div class="email-date">Feb 1, 2021 15:49 PM</div>
+                                <div class="email-subject">Receta de los jicatacos de camaron que querias.</div>
+                                <p class="recipient"><span>De:</span> Elizabeth &lt;Elizabth@futuremail.com&gt;</p>
+                            </div>
+                            <div class="email-body">
+                                <p>Buenas tardes.</p>
+                                <p>
+                                    Aca te mando la receta que utilice para hacer los jicatos de camaron que tanto te gustaron, espero que te sirva y si puedas 
+                                    hacerlo en casa.
+                                </p>
+                                <p>
+                                    Estos ricos jicatacos de camarón son ideales como entrada o plato fuerte en un día soleado. Son muy frescos y el relleno 
+                                    tiene mucho sabor gracias a la combinación de camarón al chipotle, la Ensalada Avocado Ranch Freshly by EVA® y el pico de 
+                                    gallo con piña. ¡Nadie se podrá resistir a probar estos tacos!<br>
+                                </p>
+                                <p>
+                                    Ingredientes:<br>
+                                    - 4 Porciones<br>
+                                    - Seleccionar todos los ingredientes<br>
+                                    - 1 jícama, mediana, pelada<br>
+                                    - 500 gramos de camarón, medianos, limpios y sin cáscara<br>
+                                    - 1/4 tazas de chile chipotle, molido<br>
+                                    - 2 cucharadas de jugo de piña<br>
+                                    - 1 cucharada de jugo de limón<br>
+                                    - 1 cucharada de comino<br>
+                                    - 1 cucharadita de sal<br>
+                                    - 1 cucharadita de pimienta negra molida<br>
+                                    - 1 cucharada de aceite de oliva<br>
+                                    - 1 taza de Ensalada Avocado Ranch Freshly by EVA®<br>
+                                    - 1 taza de piña, en cubos pequeños<br>
+                                    - 1/4 tazas de cebolla morada, finamente picada<br>
+                                    - 1/4 tazas de cilantro, finamente picado<br>
+                                    - 1 cucharada de jugo de limón<br>
+                                    - al gusto de sal <br>
+                                </p>
+                                <p>
+                                    Preparación:<br>
+                                    1) Rebana la jícama con ayuda de una mandolina o con un cuchillo, procura que las rebanadas queden lo más delgadas 
+                                    posible. Reserva.<br>
+                                    2) Mezcla el chipotle, el jugo de piña, el jugo de limón, el comino, la sal y la pimienta en un bowl. Después agrega 
+                                    los camarones y deja marinar por 20 minutos en refrigeración, recuerda tapar el bowl.<br>
+                                    3) Vierte el aceite de oliva en un sartén y fríe los camarones por 5 minutos o hasta que cambien de color.<br>
+                                    4) Mezcla la piña, la cebolla morada, el cilantro, el chile, el jugo de limón y la sal en un bowl. Reserva.<br>
+                                    5) Coloca la rebanada de jícama en un plato, agrega una cama de Ensalada Avocado Ranch Freshly by EVA®, 
+                                    tres camarones, el aderezo de aguacate ranch y por último, cereal extruido sabor queso cheddar y el maíz italiano. 
+                                    Acompaña con el pico de gallo con piña y disfruta.<br>
+                                </p>
+                                <p>
+                                    Listo... cuando los hagas me cuentas como te va, y si si pudiste.
+                                </p>
+                            </div>
+                            <div class="file-size">
+                                <img src="images/icono_clip_peso_archivo.png" width="20" height="20">
+                                <span>Peso archivo (120 MB)</span>
+                            </div>
+                            <div class="email-action">
+                                <button>Responder</button>
+                                <button>Reenviar</button> 
+                            </div>
+                        </div>
+                    </article>
+                <!-- Fin de los mensajes a ver -->
+                </article>
+            </section>
+
+            <!-- Informacion extra para entretener al usuario -->
+            <aside>
+                <!-- Playlist -->
+                <h3><b>Disfruta un poco de musica!</b></h3>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9oh43oAzkyx" 
+                    width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4s96jJgqDgvl" 
+                    width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4nZns6T12HO3" 
+                    width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4FpP3OTY6OyV" 
+                    width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/3LFIBdP7eZXJKqf3guepZ1" 
+                    width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                <br><br>
+            </aside>
+        </main>
+
+         <!-- Informacion de creadores -->
+         <footer>
+            <h3>Creadores de Futuremail</h3>
+            <address>Carlos Daniel Bohorquez Bolanos</address>
+            <address>Juan Jose Perez Franco</address>
+        </footer>
+
+    </body>
+</html>
