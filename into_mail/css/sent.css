@@ -1,0 +1,49 @@
+/* Inicio del css para la home page  */
+
+/* Estilo del header */
+header {
+    background-color: rgb(158, 151, 91);
+}
+/*------------------------------------*/
+
+
+/* Estilo del btn de redactar */
+.btn-abrir-popup {
+	background-color: rgb(158, 151, 91);
+}
+.btn-abrir-popup:hover {
+	background-color: rgb(116, 110, 63);
+}
+    /* Vista de ventana emergente */
+
+.btn-submit {
+	background-color: rgb(91, 166, 189);
+}
+.btn-submit:hover {
+    background: rgba(83, 116, 224, 0.9);
+}
+/*------------------------------------*/
+
+
+/* Estilo de la lista de contactos */
+#contenido_contacts {
+    background-color: rgb(117, 110, 54);
+}
+/*------------------------------------*/
+
+
+/* Estilo de lista de prev-mensajes en el buzon */
+.abrir-mail:hover {
+    background-color: rgb(116, 110, 63); 
+}
+/*------------------------------------*/
+
+
+/* Slider Mini Juego */
+.container-avatar img{
+    border:6px solid rgb(116, 110, 63);
+}
+#container-stats a:hover {
+    background-color: rgb(101, 101, 102);
+}
+/*------------------------------------*/
