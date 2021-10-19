@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Futuremail</title>
+        <meta name="description" content="Aplicacion de correos electronicos">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/favorites.css">
+    </head>
+
+    <body>
+        <!-- Inicio de la estructura de la pagina web -->
+        <header>
+            <!-- Header de la pagina, logo, nombre y salir -->
+            <img src="images/correo_electronico.svg" height="70px" width="70px" id="logo">
+            <h1>Futuremail</h1>
+            <a href="../login-sign-up/login.html"><img src="images/cerrar_sesion.svg" title="Salir" height="50px" width="50px"  id="salir" class="nav-animation"></a>
+        </header>
+
+        <!-- Barra de navegacion -->
+        <nav>
+            <ul>
+                <!-- Inicio de la sub-pagina para redactar un mensaje -->
+                <li><button id="btn-abrir-popup" class="btn-abrir-popup"><b>Redactar</b></button></li>
+                    <div class="overlay" id="overlay">
+                        <div class="popup" id="popup">
+                            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" title="Cerrar">X</a>
+                            <h3> Redactar</h3>
+                            <!-- Contenido de la sub pagina  -->
+                            <form action="" method="post">
+                                <div class="contenedor-inputs">
+                                    <!-- A quien se le enviara el mensaje -->
+                                    <p><label>Para:  <input type="text" class="input-redactar" value="" size="20" name="destinatario" placeholder="ejemplo@futuremail.com"></label></p>
+                                    <!-- Asunto -->
+                                    <p><label>Asunto: <input type="text" class="input-redactar" value="" size="20" name="asunto"></label></p>
+                                    <!-- Mensaje a enviar -->
+                                    <p><label>Mensaje<br><textarea type="text" class="input-redactar" value="" size="20" name="mensaje" id="mensaje"  
+                                        placeholder="Que mensaje desea enviar?"></textarea></label></p>
+                                </div>
+
+                                <p><input value="Enviar" type="submit" class="btn-submit"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Enlace al script para abrir y cerrar popup -->
+                    <script src="js/redactar_favorites.js"></script>
+                <!-- Fin de la popup de redactar -->
+
+                <!-- Opciones extra de la nav -->
+                <li><a href="trash.html"><img src="images/papelera.svg" height="35px" width="35px" title="Papelera" class="nav-animation"></a></li>
+                <li><a href="sent.html"><img src="images/enviados.svg" height="40px" width="40px" title="Enviados" class="nav-animation"></a></li>
+                <li><a href="index_homepage.html"><img src="images/bandeja_entrada.svg" height="40px" width="40px" title="Home" class="nav-animation"></a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal de la pagina -->
+        <main> 
+            <!-- Inicio del contenedor del contenido de la bandeja de entrada -->
+            <section id="contenido" >
+                <div class="container" id="titulo_estado_actual">
+                    <img src="images/icono_estrella.png" height="40px" width="40px">
+                    <h2>Favoritos</h2>
+                </div> 
+
+                <!-- Contenedor de los contactos que se tienen -->
+                <article id="contenido_contacts">
+                    <div class="sidebar-contacts">                       
+                        <a><img src="images/icono_contactos.png" class="avatar-img"></a>
+
+                        <!-- Lista de contactos -->
+                        <div class="sidebar-contacts-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" />
+                                            <i class="user-active">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Catalina Franco</p>
+                                            <p class="user-designation-contacts">catafrancog@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png"/>
+                                            <i class="user-inactive">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Rodrigo Alvarez</p>
+                                            <p class="user-designation-contacts">rodrialvarez@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png"/>
+                                            <i class="user-active">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Ana</p>
+                                            <p class="user-designation-contacts">anabe@futuremail.com</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        <span class="avatar-contacts">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png"/>
+                                            <i class="user-busy">&nbsp;</i>
+                                        </span>
+                                        <div class="user-contacts">
+                                            <p class="user-name-contacts">Jonathan</p>
+                                            <p class="user-designation-contacts">jonethan@futuremail</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </article>                                 
+
+                <!-- Lista de mensajes a leer  -->
+                <article id="contenido_prev_mensajes">
+
+                    <!-- Lista de mensajes -->
+                    <ul class="email-list">
+                        <li class="email-list-item" class="abrir-mail">
+                            <div class="recipient">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" height="30px" width="30px"/>
+                                <a href="#" class="recipient-name">Luna Maria</a>
+                                <button class="abrir-mail" onclick="intercambio_mails1();">
+                                    <a href="#" class="recipient-ver">Abrir</a>
+                                </button>
+                            </div>
+                            <a href="#" class="prev-email-subject">Heyyy!!! mira esta noticia sobre los robots que pueden llegar a sentir.</a>
+                            <div class="email-footer">
+                                <div class="email-action">                              
+                                    <a href="#">
+                                        <svg                 
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="fill"
+                                            >
+                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="trash-email">
+                                        <img src="images/icono_papelera_emails.png" height="22px" width="22px">  
+                                    </a>
+                                </div>
+                                <span class="email-time">13:47 PM</span>
+                            </div>
+                        </li>
+
+                        <li class="email-list-item" class="abrir-mail">
+                            <div class="recipient">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" height="30px" width="30px"/>
+                                <a href="#" class="recipient-name">Elizabeth</a>
+                                <button class="abrir-mail" onclick="intercambio_mails2();">
+                                    <a href="#" class="recipient-ver">Abrir</a>
+                                </button>
+                            </div>
+                            <a href="#" class="prev-email-subject">Receta de los jicatacos de camaron que querias.</a>
+                            <div class="email-footer">
+                                <div class="email-action">                                       
+                                    <a href="#">
+                                        <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="fill"
+                                            >
+                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="trash-email">
+                                        <img src="images/icono_papelera_emails.png" height="22px" width="22px"> 
+                                    </a>
+                                </div>
+                                <span class="email-time">15:49 PM</span>
+                            </div>
+                        </li>
+                        <br>
+
+                        <!-- Script para abrir el mensaje completo al seleccionarlo -->
+                        <script type="text/javascript">
+                                function intercambio_mails1() {
+                                    document.getElementById("contenido_mensaje2").style.visibility = "hidden";
+
+                                    document.getElementById("contenido_mensaje1").style.visibility = "visible";
+                                    document.getElementById("contenido_principal").style.visibility = "hidden";
+                                }
+                                function intercambio_mails2() {
+                                    document.getElementById("contenido_mensaje1").style.visibility = "hidden";
+
+                                    document.getElementById("contenido_mensaje2").style.visibility = "visible";
+                                    document.getElementById("contenido_principal").style.visibility = "hidden";
+                                }
+                        </script>
+                        <!-- Fin del script -->
+                    </ul>             
+                </article>
+
+                <!-- Contenido completo de los mensajes -->
+                <article id="contenido_principal">
+                    <!-- Titulo que se ve mientras no este ningun mensaje abierto -->
+                    <div id="bienvenida-ms">
+                        <p class="letra-mensaje">*</p>
+                        <p class="letra-mensaje">F</p>
+                        <p class="letra-mensaje">U</p>
+                        <p class="letra-mensaje">T</p>
+                        <p class="letra-mensaje">U</p>
+                        <p class="letra-mensaje">R</p>
+                        <p class="letra-mensaje">E</p>
+                        <p class="letra-mensaje">M</p>
+                        <p class="letra-mensaje">A</p>
+                        <p class="letra-mensaje">I</p>
+                        <p class="letra-mensaje">L</p>
+                        <p class="letra-mensaje">*</p>
+                    </div>   
+
+                    <!-- Inicio de los mensajes a verse -->
+
+                    <!-- Mensaje del primer prev-mensaje -->
+                    <article id="contenido_mensaje1" class="contenido_mensaje">
+                        <div class="email-desc">
+                            <div class="email-header">
+                                <div class="email-date">Feb 9, 2021 13:47 PM</div>
+                                <div class="email-subject">Heyyy!!! mira esta noticia sobre los robots que pueden llegar a sentir.</div>
+                                <p class="recipient"><span>De: </span> Luna Maria &lt;Lunamaria03@futuremail.com&gt;</p>
+                            </div>
+                            <div class="email-body">
+                                <p>Hola!, como estas, solo te escribo para mostrarte esta nueva noticia sobre como los robots pueden sentir... Espero
+                                    que te guste el tema.
+                                </p>
+                                <h3>
+                                    La tecnología de Inteligencia Artificial cada vez avanza más rápido y esta vez parece que ya podrán comenzar a sentir 
+                                    por medio del tacto (y la vista). 
+                                </h3>
+                                <p>
+                                    La MIT comenzó a desarrollar nueva tecnología en Inteligencia Artificial que suena interesante. Además de que parece ser uno 
+                                    de los más grandes avances en esta área de estudio. Tanto que parece sacado de una película de ciencia ficción.
+                                </p>
+                                <p>
+                                    Científicos del Laboratorio de Ciencia Computacional e Inteligencia Artificial del MIT desarrollaron una nueva tecnología que 
+                                    permite a los robots sentir los objetos y texturas a partir de la mirada. Ya que esta crea un archivo de información del 
+                                    tacto de acuerdo a la representación de los objetos que obtiene al tocar cada cosa.
+                                </p>
+                                <p><i>
+                                    Con solo ver la escena, nuestro modelo puede imaginar la sensación de tocar una superficie plana o un objeto afilado. Al 
+                                    tocar ciegamente alrededor , nuestro modelo puede predecir las interacciones con el entorno solamente basado en sensaciones 
+                                    táctiles. Traer estas dos sensaciones juntas puede empedrar al robot y reducir la información que podríamos necesitar para 
+                                    las tareas que involucran la manipulación y la recolecta de objetos.
+                                </i></p>
+                                <p>
+                                    Dijo Yunzhu Li, el autor principal de este nuevo sistema. Afirmando que esta nueva tecnología permitiría al robot manjar 
+                                    objetos reales de una manera más natural.
+                                </p>
+                            </div>
+
+                            <div class="file-size">
+                                <img src="images/icono_clip_peso_archivo.png" width="20" height="20">
+                                <span>Peso archivo (70 MB)</span>        
+                            </div>
+                            <div class="email-action">
+                                <button>Responder</button>
+                                <button>Reenviar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Mensaje del segundo prev-mensaje -->
+                    <article id="contenido_mensaje2" class="contenido_mensaje">
+                        <div class="email-desc">
+                            <div class="email-header">
+                                <div class="email-date">Feb 1, 2021 15:49 PM</div>
+                                <div class="email-subject">Receta de los jicatacos de camaron que querias.</div>
+                                <p class="recipient"><span>De:</span> Elizabeth &lt;Elizabth@futuremail.com&gt;</p>
+                            </div>
+                            <div class="email-body">
+                                <p>Buenas tardes.</p>
+                                <p>
+                                    Aca te mando la receta que utilice para hacer los jicatos de camaron que tanto te gustaron, espero que te sirva y si puedas 
+                                    hacerlo en casa.
+                                </p>
+                                <p>
+                                    Estos ricos jicatacos de camarón son ideales como entrada o plato fuerte en un día soleado. Son muy frescos y el relleno 
+                                    tiene mucho sabor gracias a la combinación de camarón al chipotle, la Ensalada Avocado Ranch Freshly by EVA® y el pico de 
+                                    gallo con piña. ¡Nadie se podrá resistir a probar estos tacos!<br>
+                                </p>
+                                <p>
+                                    Ingredientes:<br>
+                                    - 4 Porciones<br>
+                                    - Seleccionar todos los ingredientes<br>
+                                    - 1 jícama, mediana, pelada<br>
+                                    - 500 gramos de camarón, medianos, limpios y sin cáscara<br>
+                                    - 1/4 tazas de chile chipotle, molido<br>
+                                    - 2 cucharadas de jugo de piña<br>
+                                    - 1 cucharada de jugo de limón<br>
+                                    - 1 cucharada de comino<br>
+                                    - 1 cucharadita de sal<br>
+                                    - 1 cucharadita de pimienta negra molida<br>
+                                    - 1 cucharada de aceite de oliva<br>
+                                    - 1 taza de Ensalada Avocado Ranch Freshly by EVA®<br>
+                                    - 1 taza de piña, en cubos pequeños<br>
+                                    - 1/4 tazas de cebolla morada, finamente picada<br>
+                                    - 1/4 tazas de cilantro, finamente picado<br>
+                                    - 1 cucharada de jugo de limón<br>
+                                    - al gusto de sal <br>
+                                </p>
+                                <p>
+                                    Preparación:<br>
+                                    1) Rebana la jícama con ayuda de una mandolina o con un cuchillo, procura que las rebanadas queden lo más delgadas 
+                                    posible. Reserva.<br>
+                                    2) Mezcla el chipotle, el jugo de piña, el jugo de limón, el comino, la sal y la pimienta en un bowl. Después agrega 
+                                    los camarones y deja marinar por 20 minutos en refrigeración, recuerda tapar el bowl.<br>
+                                    3) Vierte el aceite de oliva en un sartén y fríe los camarones por 5 minutos o hasta que cambien de color.<br>
+                                    4) Mezcla la piña, la cebolla morada, el cilantro, el chile, el jugo de limón y la sal en un bowl. Reserva.<br>
+                                    5) Coloca la rebanada de jícama en un plato, agrega una cama de Ensalada Avocado Ranch Freshly by EVA®, 
+                                    tres camarones, el aderezo de aguacate ranch y por último, cereal extruido sabor queso cheddar y el maíz italiano. 
+                                    Acompaña con el pico de gallo con piña y disfruta.<br>
+                                </p>
+                                <p>
+                                    Listo... cuando los hagas me cuentas como te va, y si si pudiste.
+                                </p>
+                            </div>
+                            <div class="file-size">
+                                <img src="images/icono_clip_peso_archivo.png" width="20" height="20">
+                                <span>Peso archivo (120 MB)</span>
+                            </div>
+                            <div class="email-action">
+                                <button>Responder</button>
+                                <button>Reenviar</button> 
+                            </div>
+                        </div>
+                    </article>
+                <!-- Fin de los mensajes a ver -->
+                </article>
+            </section>
+
+            <!-- Informacion extra para entretener al usuario -->
+            <aside>
+                <!-- Next o Prev para cambiar entre las diferentes areas del aside -->
+                <a href="#" id="control-next">Musica =></a>
+                <a href="#" id="control-prev"><= Juego</a>
+                <!-- Diferentes ventanas del aside -->
+                <ul id="slider_items">
+                    <!-- Ventana del Mini Juego -->
+                    <li id="slider_miniJuego">
+                        <h3><b>Mini Juego</b></h3>
+                        <!-- Contenedores del avatar -->
+                        <div id="container-vs">
+                            <div class="container-avatar">
+                                <a href="#" id="name_1">---</a>
+                                <img src="#" width="160px" height="180px" id="avatar_1"><br>
+                            </div>
+
+                            <p> VS </p>
+                            
+                            <div class="container-avatar">
+                                <a href="#" id="name_2">---</a>
+                                <img src="#" width="160px" height="180px" id="avatar_2"><br>
+                            </div>
+                        </div>
+
+                        <!-- Lista de personajes -->
+                        <div class="eleccion-de-personajes">
+                            <!-- Seleccion de personajes primer jugador -->
+                            <select id="eleccion_1">
+                                <option value="">Escoja uno...</option>
+
+                                <optgroup label="Benevolos"></optgroup>
+                                <option value="Rick_Sanchez">Rick Sanchez</option>
+                                <option value="Armothy">Armothy</option>
+                                <option value="Phoenixperson">Phoenixperson</option>
+                                <option value="Mr_Meeseeks">Mr. Meeseeks</option>
+
+                                <optgroup label="Malvados"></optgroup>
+                                <option value="Reggie">Reggie</option>
+                                <option value="Rat_Boss">Rat Boss</option>
+                                <option value="Toxic_Rick">Toxic Rick</option>
+                                <option value="Worldender">Worldender</option>
+                            </select>
+                            <!-- Seleccion de personajes segundo jugador -->
+                            <select id="eleccion_2">
+                                <option value="">Escoja uno...</option>
+
+                                <optgroup label="Benevolos"></optgroup>
+                                <option value="Rick_Sanchez">Rick Sanchez</option>
+                                <option value="Armothy">Armothy</option>
+                                <option value="Phoenixperson">Phoenixperson</option>
+                                <option value="Mr_Meeseeks">Mr. Meeseeks</option>
+
+                                <optgroup label="Malvados"></optgroup>
+                                <option value="Reggie">Reggie</option>
+                                <option value="Rat_Boss">Rat Boss</option>
+                                <option value="Toxic_Rick">Toxic Rick</option>
+                                <option value="Worldender">Worldender</option> 
+                            </select>
+                        </div>
+
+                        <!-- Contenido de los stats del jugador #1 -->
+                        <div id="container-stats">  
+                            <div class="stats" id="stats_01"> 
+                                <!-- Especie -->         
+                                <h4 class="especie">Especie: </h4>
+                                <h4 id="especie_user1" class="type_Especie">---</h4>
+                                <!-- Stats --> 
+                                <h4>STATS </h4>
+                                <h5>Fuerza</h5>
+                                <div class="cuadro1" id="fuerza1"></div>
+                                <div class="cuadro2" id="fuerza2"></div>
+                                <div class="cuadro3" id="fuerza3"></div>
+                                <div class="cuadro4" id="fuerza4"></div><br>
+                                <h5>Vida</h5>
+                                <div class="cuadro1" id="vida1"></div>
+                                <div class="cuadro2" id="vida2"></div>
+                                <div class="cuadro3" id="vida3"></div>
+                                <div class="cuadro4" id="vida4"></div><br>
+                                <h5>Inteligencia/Magia</h5>
+                                <div class="cuadro1" id="inteligencia1"></div>
+                                <div class="cuadro2" id="inteligencia2"></div>
+                                <div class="cuadro3" id="inteligencia3"></div>
+                                <div class="cuadro4" id="inteligencia4"></div>
+                                <!-- Habilidades del personaje -->
+                                <h5>Habilidades</h5>
+                                <!-- Iconos de habilidad 1 y abrir popup -->
+                                <div class="habilidades_icono abrir-popup-habilidades" id="abrir-popup-habilidad_1">
+                                    <img src="#" width="35px" height="35px" id="habilidad_1">    
+                                </div>
+                                <div class="overlay-habilidades" id="overlay-habilidad_1">
+                                    <div class="popup-habilidades" id="popup-habilidad_1">
+                                        <a href="#" class="cerrar-popup-habilidades" id="cerrar-popup-habilidad_1" title="Cerrar">X</a>
+                                        <!-- Contenido de la sub pagina  -->
+                                        <div class="descripcion-habilidad">
+                                            <!-- A quien se le enviara el mensaje -->
+                                            <h4 id="name_habilidad_1">Blaskites_1</h4>
+                                            <p class="personaje-habilidad"><b>Habilidad del:</b></p>
+                                            <p class="personaje-habilidad" id="personaje_habilidad_1">---</p>
+                                            <p class="personaje-habilidad"><b>Tipo:</b></p>
+                                            <p class="personaje-habilidad" id="tipo_habilidad_1">---</p>
+                                            <p id="descripcion_habilidad_1">
+                                               ---
+                                            </p>                               
+                                        </div>  
+                                    </div>
+                                </div> 
+                                <!-- Iconos de habilidad 2 y abrir popup -->
+                                <div class="habilidades_icono abrir-popup-habilidades" id="abrir-popup-habilidad_2">
+                                    <img src="#" width="35px" height="35px" id="habilidad_2">
+                                </div>
+                                <div class="overlay-habilidades" id="overlay-habilidad_2">
+                                    <div class="popup-habilidades" id="popup-habilidad_2">
+                                        <a href="#" class="cerrar-popup-habilidades" id="cerrar-popup-habilidad_2" title="Cerrar">X</a>
+                                        <!-- Contenido de la sub pagina  -->
+                                        <div class="descripcion-habilidad">
+                                            <!-- A quien se le enviara el mensaje -->
+                                            <h4 id="name_habilidad_2">Blaskites_2</h4>
+                                            <p class="personaje-habilidad"><b>Habilidad del:</b></p>
+                                            <p class="personaje-habilidad" id="personaje_habilidad_2">---</p> 
+                                            <p class="personaje-habilidad"><b>Tipo:</b></p>
+                                            <p class="personaje-habilidad" id="tipo_habilidad_2">---</p> 
+                                            <p id="descripcion_habilidad_2">
+                                                ---
+                                            </p>                               
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!-- Iconos de habilidad 3 y abrir popup -->
+                                <div class="habilidades_icono abrir-popup-habilidades" id="abrir-popup-habilidad_3">
+                                    <img src="#" width="35px" height="35px" id="habilidad_3">
+                                </div>
+                                <div class="overlay-habilidades" id="overlay-habilidad_3">
+                                    <div class="popup-habilidades" id="popup-habilidad_3">
+                                        <a href="#" class="cerrar-popup-habilidades" id="cerrar-popup-habilidad_3" title="Cerrar">X</a>
+                                        <!-- Contenido de la sub pagina  -->
+                                        <div class="descripcion-habilidad">
+                                            <!-- A quien se le enviara el mensaje -->
+                                            <h4 id="name_habilidad_3">Blaskites_3</h4>
+                                            <p class="personaje-habilidad"><b>Habilidad del:</b></p>
+                                            <p class="personaje-habilidad" id="personaje_habilidad_3">---</p>                                       
+                                            <p class="personaje-habilidad"><b>Tipo:</b></p>
+                                            <p class="personaje-habilidad" id="tipo_habilidad_3">---</p> 
+                                            <p id="descripcion_habilidad_3">
+                                                ---
+                                            </p>                               
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>                 
+
+                            <!-- Empieza batalla -->
+                            <a href="#" id="empezar_guerra"> Empezar </a>                          
+                            
+                            <!-- Contenido de los stats del jugador #1 -->
+                            <div class="stats" id="stats_02">
+                                <!-- Especie -->
+                                <h4 class="especie">Especie: </h4>
+                                <h4 id="especie_user2" class="type_Especie">---</h4>
+                                <!-- Stats -->
+                                <h4>STATS </h4>
+                                <h5>Fuerza</h5>
+                                <div class="cuadro1" id="fuerza1_2"></div>
+                                <div class="cuadro2" id="fuerza2_2"></div>
+                                <div class="cuadro3" id="fuerza3_2"></div>
+                                <div class="cuadro4" id="fuerza4_2"></div><br>
+                                <h5>Vida</h5>
+                                <div class="cuadro1" id="vida1_2"></div>
+                                <div class="cuadro2" id="vida2_2"></div>
+                                <div class="cuadro3" id="vida3_2"></div>
+                                <div class="cuadro4" id="vida4_2"></div><br>
+                                <h5>Inteligencia/Magia</h5>
+                                <div class="cuadro1" id="inteligencia1_2"></div>
+                                <div class="cuadro2" id="inteligencia2_2"></div>
+                                <div class="cuadro3" id="inteligencia3_2"></div>
+                                <div class="cuadro4" id="inteligencia4_2"></div>
+                                <!-- Habilidades del personaje -->
+                                <h5>Habilidades</h5>
+                                <!-- Iconos de habilidad 01 y abrir popup -->
+                                <div class="habilidades_icono abrir-popup-habilidades" id="abrir-popup-habilidad_01">
+                                    <img src="#" width="35px" height="35px" id="habilidad_01">    
+                                </div>
+                                <div class="overlay-habilidades" id="overlay-habilidad_01">
+                                    <div class="popup-habilidades" id="popup-habilidad_01">
+                                        <a href="#" class=" cerrar-popup-habilidades" id="cerrar-popup-habilidad_01" title="Cerrar">X</a>
+                                        <!-- Contenido de la sub pagina  -->
+                                        <div class="descripcion-habilidad">
+                                            <!-- A quien se le enviara el mensaje -->
+                                            <h4 id="name_habilidad_01">Blaskites_01</h4>
+                                            <p class="personaje-habilidad"><b>Habilidad del:</b></p>
+                                            <p class="personaje-habilidad" id="personaje_habilidad_01">---</p>  
+                                            <p class="personaje-habilidad"><b>Tipo:</b></p>
+                                            <p class="personaje-habilidad" id="tipo_habilidad_01">---</p> 
+                                            <p id="descripcion_habilidad_01">
+                                                ---
+                                            </p>                               
+                                        </div>  
+                                    </div>
+                                </div> 
+                                <!-- Iconos de habilidad 02 y abrir popup -->
+                                <div class="habilidades_icono abrir-popup-habilidades" id="abrir-popup-habilidad_02">
+                                    <img src="#" width="35px" height="35px" id="habilidad_02">
+                                </div>
+                                <div class="overlay-habilidades" id="overlay-habilidad_02">
+                                    <div class="popup-habilidades" id="popup-habilidad_02">
+                                        <a href="#" class=" cerrar-popup-habilidades" id="cerrar-popup-habilidad_02" title="Cerrar">X</a>
+                                        <!-- Contenido de la sub pagina  -->
+                                        <div class="descripcion-habilidad">
+                                            <!-- A quien se le enviara el mensaje -->
+                                            <h4 id="name_habilidad_02">Blaskites_02</h4>
+                                            <p class="personaje-habilidad"><b>Habilidad del:</b></p>
+                                            <p class="personaje-habilidad" id="personaje_habilidad_02">---</p> 
+                                            <p class="personaje-habilidad"><b>Tipo:</b></p>
+                                            <p class="personaje-habilidad" id="tipo_habilidad_02">---</p>                                           
+                                            <p id="descripcion_habilidad_02">
+                                                ---
+                                            </p>                               
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!-- Iconos de habilidad 03 y abrir popup -->
+                                <div class="habilidades_icono abrir-popup-habilidades" id="abrir-popup-habilidad_03">
+                                    <img src="#" width="35px" height="35px" id="habilidad_03">
+                                </div>
+                                <div class="overlay-habilidades" id="overlay-habilidad_03">
+                                    <div class="popup-habilidades" id="popup-habilidad_03">
+                                        <a href="#" class=" cerrar-popup-habilidades" id="cerrar-popup-habilidad_03" title="Cerrar">X</a>
+                                        <!-- Contenido de la sub pagina  -->
+                                        <div class="descripcion-habilidad">
+                                            <!-- A quien se le enviara el mensaje -->
+                                            <h4 id="name_habilidad_03">Blaskites_03</h4>
+                                            <p class="personaje-habilidad"><b>Habilidad del:</b></p>
+                                            <p class="personaje-habilidad" id="personaje_habilidad_03">---</p>
+                                            <p class="personaje-habilidad"><b>Tipo:</b></p>
+                                            <p class="personaje-habilidad" id="tipo_habilidad_03">---</p>
+                                            <p id="descripcion_habilidad_03">
+                                                ---
+                                            </p>                               
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Script para validar los stats -->
+                            <script src="js/stats_personajes.js"></script> 
+                            <!-- Script para ver las habilidades -->
+                            <script src="js/habilidades.js"></script>
+                        </div>
+                    </li>
+
+                    <li id="slider_musica">
+                        <h3><b>Disfruta un poco de musica!</b></h3>
+                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9oh43oAzkyx" 
+                            width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4s96jJgqDgvl" 
+                            width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4nZns6T12HO3" 
+                            width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1E4FpP3OTY6OyV" 
+                            width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                        <iframe src="https://open.spotify.com/embed/playlist/3LFIBdP7eZXJKqf3guepZ1" 
+                            width="430" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media" class="playlists"></iframe>
+                        <br><br>
+                    </li>
+
+                    <!-- Ventana temporal del vs -->
+                    <li id="pagina-inicial-batalla">
+                        <img src="#" width="230px" height="280px" id="rival_1">
+                        <h2 id="">Vs</h2>
+                        <img src="#" width="230px" height="280px" id="rival_2"> 
+                    </li>
+
+                    <!-- Ventana del Juego -->
+                    <li id="pagina-principal-batalla">
+                        <a href="#" id="cerrar-popup-batalla" title="Cerrar">X</a>
+
+                        <!-- Player 1 -->
+                        <div id="contenedor-rival_01">
+                            <img src="#" width="200px" height="250px" id="rival_01">
+
+                            <div id="stats-avatar_01">
+                                <div id="margin-top-avatar_01" class="color-barra">
+                                    <!-- Vida -->
+                                    <img src="images/icono_corazon.png" width="30px" height="30px" class="icono_left">
+                                    <span class="porcentaje_right"><span id="vidaJugador1">-</span><span id="vidaJugador01">/N</span></span>
+                                    <progress id="vida_jugador_1" max="" value="" class="contador-stats"></progress>
+                                </div>
+
+                                <div class="color-barra-mana">
+                                    <!-- Mana -->
+                                    <img src="images/icono_frasco_magia.png" width="30px" height="30px" class="icono_left">
+                                    <span class="porcentaje_right_mana"><span id="manaJugador1">120</span><span>/120</span></span>
+                                    <progress id="mana_jugador_1" max="120" value="120" class="contador-stats"></progress>
+                                </div>    
+ 
+                            </div>
+
+                            <div class="habilidades-guerra_01" id="">
+                                <img src="#" width="40px" height="40px" id="habilidad_batlla_1" class="icono_habilidad_batlla">    
+                            </div>
+
+                            <div class="habilidades-guerra_01" id="">
+                                <img src="#" width="40px" height="40px" id="habilidad_batlla_2" class="icono_habilidad_batlla">
+                            </div>
+
+                            <div class="habilidades-guerra_01" id="">
+                                <img src="#" width="40px" height="40px" id="habilidad_batlla_3" class="icono_habilidad_batlla">
+                            </div>
+                        </div>
+
+                        <!-- Player 2 -->   
+                        <div id="contenedor-rival_02">
+                            <img src="#" width="200px" height="250px" id="rival_02">
+
+                            <div id="stats-avatar_02">
+                                <div id="margin-top-avatar_02" class="color-barra">
+                                    <!-- Vida -->
+                                    <img src="images/icono_corazon.png" width="30px" height="30px" class="icono_left">
+                                    <span class="porcentaje_right"><span id="vidaJugador2">-</span><span id="vidaJugador02">/N</span></span>
+                                    <progress id="vida_jugador_2" max="" value="" class="contador-stats"></progress>
+                                </div>    
+
+                                <div class="color-barra-mana">
+                                    <!-- Mana -->
+                                    <img src="images/icono_frasco_magia.png" width="30px" height="30px" class="icono_left">
+                                    <span class="porcentaje_right_mana"><span id="manaJugador2">120</span><span>/120</span></span>
+                                    <progress id="mana_jugador_2" max="120" value="120" class="contador-stats"></progress>
+                                </div>    
+
+                            </div>
+
+                            <div class="habilidades-guerra_02" id="">
+                                <img src="#" width="40px" height="40px" id="habilidad_batlla_01" class="icono_habilidad_batlla2" title="">    
+                            </div>
+
+                            <div class="habilidades-guerra_02" id="">
+                                <img src="#" width="40px" height="40px" id="habilidad_batlla_02" class="icono_habilidad_batlla2" title="">
+                            </div>
+
+                            <div class="habilidades-guerra_02" id="">
+                                <img src="#" width="40px" height="40px" id="habilidad_batlla_03" class="icono_habilidad_batlla2" title="">
+                            </div>
+                        </div>
+                    </li>
+                    <script src="js/juego.js"></script>
+
+                </ul>
+                <script src="js/slider.js"></script>
+            </aside>
+        </main>
+
+         <!-- Informacion de creadores -->
+         <footer>
+            <h3>Creadores de Futuremail</h3>
+            <address>Carlos Daniel Bohorquez Bolanos</address>
+            <address>Juan Jose Perez Franco</address>
+        </footer>
+
+    </body>
+</html>
